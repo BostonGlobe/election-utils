@@ -1,7 +1,6 @@
 const sortByOrder         = require('lodash/collection/sortByOrder');
 const addCommas           = require('add-commas');
-const expandAbbreviations = require('./../util/expandAbbreviations');
-const standardize         = require('./../util/standardize');
+const Standardize         = require('./../util/Standardize');
 
 function candidateRow(candidate, index, totalVoteCount) {
 
@@ -14,7 +13,7 @@ function candidateRow(candidate, index, totalVoteCount) {
 	return `
 		<tr>
 			<th scope='row' class='candidate'><img alt='' src='assets/img/2014-11-04-ma-governor-baker.png' /><span class='long'>${[first, last].join(' ')}</span><span class='short'>${last}</span></th>
-			<td class='percent'><span class='number'>${standardize.percent(percent)}</span><span class='sign'>%</span></td>
+			<td class='percent'><span class='number'>${Standardize.percent(percent)}</span><span class='sign'>%</span></td>
 			<td class='votes'>${addCommas(voteCount)}</td>
 		</tr>
 	`;
@@ -35,7 +34,7 @@ module.exports = function stateResultsLargeTable(results) {
 		.reduce((x, y) => x + y);
 
 	return `
-	<table summary='A table that has the candidate, percent, and vote count across the top and the candidates down the left hand side for the 2016 ${stateRU.stateName} ${expandAbbreviations.party(results.party)} ${standardize.raceType(results.raceType).toLowerCase()}'>
+	<table summary='A table that has the candidate, percent, and vote count across the top and the candidates down the left hand side for the 2016 ${stateRU.stateName} ${Standardize.expand.party(results.party)} ${Standardize.raceType(results.raceType).toLowerCase()}'>
 		<thead>
 			<tr>
 				<th scope='col' class='candidate'>Candidates</th>

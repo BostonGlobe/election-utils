@@ -1,5 +1,5 @@
 {
-  "name": "y",
+  "name": "election-components",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,6 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "add-commas": "0.0.4",
-    "lodash": "^3.10.1"
+    "lodash": "^3.10.1",
+    "united-states": "^1.0.0"
   }
 }
