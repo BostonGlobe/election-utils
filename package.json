@@ -5,7 +5,8 @@
 	"main": "build/index.js",
 	"scripts": {
 		"clean": "rimraf build",
-		"build": "npm run clean && babel -d build src"
+		"build": "npm run clean && babel -d build src",
+		"prepublish": "npm run build"
 	},
 	"author": "",
 	"license": "MIT",
