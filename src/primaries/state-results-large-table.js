@@ -8,7 +8,6 @@ function candidateRow(candidate, index, totalVoteCount) {
 	const last      = candidate.hasOwnProperty('last') ? candidate.last : '';
 	const voteCount = candidate.hasOwnProperty('voteCount') ? candidate.voteCount : 0;
 	const percent   = totalVoteCount > 0 ? candidate.voteCount/totalVoteCount : 0;
-	const pctSign   = index === 0 ? '%' : '';
 
 	return `
 		<tr>
