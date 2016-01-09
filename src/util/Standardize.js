@@ -15,8 +15,20 @@ const Standardize = {
 
 	},
 
-	raceType: function(x) {
-		return x.replace(/aucus$/, 'aucuses');
+	collapse: {
+
+		state: function(name) {
+			return unitedStates.filter(state => state.name.toLowerCase() === name.toLowerCase())[0].abbr;
+		},
+
+		party: function(name) {
+			return Parties.filter(party => party.name.toLowerCase() === name.toLowerCase())[0].abbr;
+		}
+
+	},
+
+	raceType: function(x, undo) {
+		return undo ? x.replace(/aucuses$/, 'aucus') : x.replace(/aucus$/, 'aucuses');
 	},
 
 	percent: function(x, shorten) {
