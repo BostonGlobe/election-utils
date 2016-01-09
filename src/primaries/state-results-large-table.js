@@ -1,6 +1,6 @@
-const sortByOrder         = require('lodash/collection/sortByOrder');
-const addCommas           = require('add-commas');
-const Standardize         = require('./../util/Standardize');
+import sortByOrder from 'lodash/collection/sortByOrder';
+import addCommas from 'add-commas';
+import Standardize from './../util/Standardize';
 
 function candidateRow(candidate, index, totalVoteCount) {
 
@@ -20,7 +20,7 @@ function candidateRow(candidate, index, totalVoteCount) {
 
 }
 
-module.exports = function stateResultsLargeTable(results) {
+export default function stateResultsLargeTable(results) {
 
 	// get state-level reporting unit
 	const stateRU = results.reportingUnits.filter(x => x.level === 'state')[0];

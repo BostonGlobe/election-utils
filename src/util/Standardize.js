@@ -1,7 +1,7 @@
-const unitedStates = require('united-states');
-const Parties      = require('./Parties');
+import unitedStates from 'united-states';
+import Parties from './Parties';
 
-module.exports = {
+const Standardize = {
 
 	expand: {
 
@@ -34,3 +34,5 @@ module.exports = {
 	}
 
 };
+
+export default Standardize;

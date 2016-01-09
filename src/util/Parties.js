@@ -1,4 +1,4 @@
-module.exports = [
+const Parties = [
 	{
 		abbr: 'DEM',
 		name: 'Democratic'
@@ -8,3 +8,5 @@ module.exports = [
 		name: 'Republican'
 	}
 ];
+
+export default Parties;
