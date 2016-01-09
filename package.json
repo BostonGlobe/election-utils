@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "build/index.js",
+  "jsnext:main": "build/index.es6.js",
   "scripts": {
     "clean": "rimraf build",
-    "build": "npm run clean && rollup -c -f cjs -i src/index.js -o build/index.js",
+    "build:cjs": "rollup -c -f cjs -i src/index.js -o build/index.js",
+    "build:es6": "rollup           -i src/index.js -o build/index.es6.js",
+    "build": "npm run clean && npm run build:cjs && npm run build:es6",
     "prepublish": "npm run build"
   },
   "author": "",
@@ -13,7 +16,6 @@
   "dependencies": {
     "add-commas": "0.0.4",
     "lodash": "^3.10.1",
-    "periodic.js": "^1.0.2",
     "united-states": "^1.0.0"
   },
   "devDependencies": {
