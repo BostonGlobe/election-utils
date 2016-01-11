@@ -35,6 +35,8 @@ export default function stateResultsLargeTable(results) {
 		.reduce((x, y) => x + y);
 
 	return `
+	<div class='precincts'><span class='iota'>${stateRU.precinctsReportingPct}% precincts reporting</span></div>
+
 	<table summary='A table that has the candidate, percent, and vote count across the top and the candidates down the left hand side for the 2016 ${stateRU.stateName} ${Standardize.expand.party(results.party)} ${Standardize.raceType(results.raceType).toLowerCase()}'>
 		<thead>
 			<tr>
