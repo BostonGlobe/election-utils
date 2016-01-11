@@ -10,9 +10,11 @@ function candidateRow(candidate, index, totalVoteCount) {
 	const percent   = totalVoteCount > 0 ? candidate.voteCount/totalVoteCount : 0;
 	const displayPct = Standardize.percent(percent);
 
+	const winnerTag = candidate.winner === 'X' ? '<span class="winner">✔</span>' : '';
+
 	return `
 		<tr>
-			<th scope='row' class='candidate'><img alt='' src='assets/img/${index % 5}.png' /><span class='long name epsilon'>${[first, last].join(' ')}</span><span class='short name epsilon'>${last}</span></th>
+			<th scope='row' class='candidate'><img alt='' src='assets/img/${index % 5}.png' />${winnerTag}<span class='long name epsilon'>${[first, last].join(' ')}</span><span class='short name epsilon'>${last}</span></th>
 			<td class='percent'><span class='number theta'>${displayPct}</span><span class='sign theta'>%</span></td>
 			<td class='bar'><span class='container'><span style='width: ${displayPct}%' class='colored-bar theta'>&nbsp;</span></span></td>
 			<td class='votes'><span class='iota'>${addCommas(voteCount)}</span></td>
