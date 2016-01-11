@@ -8,12 +8,14 @@ function candidateRow(candidate, index, totalVoteCount) {
 	const last      = candidate.hasOwnProperty('last') ? candidate.last : '';
 	const voteCount = candidate.hasOwnProperty('voteCount') ? candidate.voteCount : 0;
 	const percent   = totalVoteCount > 0 ? candidate.voteCount/totalVoteCount : 0;
+	const displayPct = Standardize.percent(percent);
 
 	return `
 		<tr>
-			<th scope='row' class='candidate'><img alt='' src='assets/img/2014-11-04-ma-governor-baker.png' /><span class='long'>${[first, last].join(' ')}</span><span class='short'>${last}</span></th>
-			<td class='percent'><span class='number'>${Standardize.percent(percent)}</span><span class='sign'>%</span></td>
-			<td class='votes'>${addCommas(voteCount)}</td>
+			<th scope='row' class='candidate'><img alt='' src='assets/img/${index % 5}.png' /><span class='long name epsilon'>${[first, last].join(' ')}</span><span class='short name epsilon'>${last}</span></th>
+			<td class='percent'><span class='number theta'>${displayPct}</span><span class='sign theta'>%</span></td>
+			<td class='bar'><span class='container'><span style='width: ${displayPct}%' class='colored-bar theta'>&nbsp;</span></span></td>
+			<td class='votes'><span class='iota'>${addCommas(voteCount)}</span></td>
 		</tr>
 	`;
 
@@ -36,16 +38,16 @@ export default function stateResultsLargeTable(results) {
 	<table summary='A table that has the candidate, percent, and vote count across the top and the candidates down the left hand side for the 2016 ${stateRU.stateName} ${Standardize.expand.party(results.party)} ${Standardize.raceType(results.raceType).toLowerCase()}'>
 		<thead>
 			<tr>
-				<th scope='col' class='candidate'>Candidates</th>
-				<th scope='col' class='percent'>Percent</th>
-				<th scope='col' class='votes'>Votes</th>
+				<th scope='col' class='iota candidate'>Candidates</th>
+				<th scope='col' class='iota percent'>Percent</th>
+				<th scope='col' class='iota bar'>&nbsp;</th>
+				<th scope='col' class='iota votes'>Votes</th>
 			</tr>
 		</thead>
 		<tbody>
 			${candidates.map((x, i) => candidateRow(x, i, totalVoteCount)).join('')}
 		</tbody>
 	</table>
-
 	`;
 
 }
