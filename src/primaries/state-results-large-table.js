@@ -4,13 +4,12 @@ import Standardize from './../util/Standardize';
 
 function candidateRow(candidate, index, totalVoteCount) {
 
-	const first     = candidate.hasOwnProperty('first') ? candidate.first : '';
-	const last      = candidate.hasOwnProperty('last') ? candidate.last : '';
-	const voteCount = candidate.hasOwnProperty('voteCount') ? candidate.voteCount : 0;
-	const percent   = totalVoteCount > 0 ? candidate.voteCount/totalVoteCount : 0;
+	const first      = candidate.hasOwnProperty('first') ? candidate.first : '';
+	const last       = candidate.hasOwnProperty('last') ? candidate.last : '';
+	const voteCount  = candidate.hasOwnProperty('voteCount') ? candidate.voteCount : 0;
+	const percent    = totalVoteCount > 0 ? candidate.voteCount/totalVoteCount : 0;
 	const displayPct = Standardize.percent(percent);
-
-	const winnerTag = candidate.winner === 'X' ? '<span class="winner">✔</span>' : '';
+	const winnerTag  = candidate.winner === 'X' ? '<span class="winner">✔</span>' : '';
 
 	return `
 		<tr>
