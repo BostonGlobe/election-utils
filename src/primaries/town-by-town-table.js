@@ -16,6 +16,17 @@ function candidateHead(candidate, index) {
 
 }
 
+function townRow() {
+
+	return `
+
+	<tr data-reactid=".0.6.1.0.1.$Abington"><td data-reactid=".0.6.1.0.1.$Abington.0"><div data-reactid=".0.6.1.0.1.$Abington.0.0"><span data-reactid=".0.6.1.0.1.$Abington.0.0.0"><a href="/news/politics/election-results/2014-11-04/town/MA/Abington?p1=BG_elections_town_results" data-reactid=".0.6.1.0.1.$Abington.0.0.0.0">Abington</a></span></div><div data-reactid=".0.6.1.0.1.$Abington.0.1"><span data-reactid=".0.6.1.0.1.$Abington.0.1.0"><span data-reactid=".0.6.1.0.1.$Abington.0.1.0.0">5</span><span data-reactid=".0.6.1.0.1.$Abington.0.1.0.1"> of </span><span data-reactid=".0.6.1.0.1.$Abington.0.1.0.2">5</span></span></div></td><td data-reactid=".0.6.1.0.1.$Abington.1:$39388934"><div data-reactid=".0.6.1.0.1.$Abington.1:$39388934.0"><span data-reactid=".0.6.1.0.1.$Abington.1:$39388934.0.0"><span data-reactid=".0.6.1.0.1.$Abington.1:$39388934.0.0.0">59.0</span><span data-reactid=".0.6.1.0.1.$Abington.1:$39388934.0.0.1">%</span></span></div><div data-reactid=".0.6.1.0.1.$Abington.1:$39388934.1"><span data-reactid=".0.6.1.0.1.$Abington.1:$39388934.1.0">3,458</span></div></td><td data-reactid=".0.6.1.0.1.$Abington.1:$39385862"><div data-reactid=".0.6.1.0.1.$Abington.1:$39385862.0"><span data-reactid=".0.6.1.0.1.$Abington.1:$39385862.0.0"><span data-reactid=".0.6.1.0.1.$Abington.1:$39385862.0.0.0">35.9</span><span data-reactid=".0.6.1.0.1.$Abington.1:$39385862.0.0.1">%</span></span></div><div data-reactid=".0.6.1.0.1.$Abington.1:$39385862.1"><span data-reactid=".0.6.1.0.1.$Abington.1:$39385862.1.0">2,104</span></div></td><td data-reactid=".0.6.1.0.1.$Abington.1:$39896838"><div data-reactid=".0.6.1.0.1.$Abington.1:$39896838.0"><span data-reactid=".0.6.1.0.1.$Abington.1:$39896838.0.0"><span data-reactid=".0.6.1.0.1.$Abington.1:$39896838.0.0.0">3.4</span><span data-reactid=".0.6.1.0.1.$Abington.1:$39896838.0.0.1">%</span></span></div><div data-reactid=".0.6.1.0.1.$Abington.1:$39896838.1"><span data-reactid=".0.6.1.0.1.$Abington.1:$39896838.1.0">202</span></div></td><td data-reactid=".0.6.1.0.1.$Abington.1:$39894790"><div data-reactid=".0.6.1.0.1.$Abington.1:$39894790.0"><span data-reactid=".0.6.1.0.1.$Abington.1:$39894790.0.0"><span data-reactid=".0.6.1.0.1.$Abington.1:$39894790.0.0.0">0.8</span><span data-reactid=".0.6.1.0.1.$Abington.1:$39894790.0.0.1">%</span></span></div><div data-reactid=".0.6.1.0.1.$Abington.1:$39894790.1"><span data-reactid=".0.6.1.0.1.$Abington.1:$39894790.1.0">49</span></div></td><td data-reactid=".0.6.1.0.1.$Abington.1:$39895814"><div data-reactid=".0.6.1.0.1.$Abington.1:$39895814.0"><span data-reactid=".0.6.1.0.1.$Abington.1:$39895814.0.0"><span data-reactid=".0.6.1.0.1.$Abington.1:$39895814.0.0.0">0.8</span><span data-reactid=".0.6.1.0.1.$Abington.1:$39895814.0.0.1">%</span></span></div><div data-reactid=".0.6.1.0.1.$Abington.1:$39895814.1"><span data-reactid=".0.6.1.0.1.$Abington.1:$39895814.1.0">45</span></div></td></tr>
+
+
+	`;
+
+}
+
 export default function townByTownTable(results) {
 
 	// get state-level reporting unit
