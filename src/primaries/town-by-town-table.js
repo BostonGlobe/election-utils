@@ -95,6 +95,7 @@ export default function townByTownTable(results) {
 
 	return `
 
+		<h3>Town by town results</h3>
 		<table summary='A table that has candidates across the top and towns down the left hand side for the 2016 ${stateRU.stateName} ${Standardize.expand.party(results.party)} ${Standardize.raceType(results.raceType).toLowerCase()}'>
 
 			<thead>
@@ -106,6 +107,10 @@ export default function townByTownTable(results) {
 					</th>
 
 					${candidates.slice(0, NUMBER_TO_DISPLAY).map((x, i) => candidateHead(x, i)).join('')}
+
+					<th scope='col'>
+						<div><span>Others</span></div>
+					</th>
 
 				</tr>
 			</thead>
