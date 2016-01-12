@@ -1,5 +1,13 @@
+import indexOf from 'lodash/array/indexOf';
+import sortBy from 'lodash/collection/sortBy';
 import sortByOrder from 'lodash/collection/sortByOrder';
+import pluck from 'lodash/collection/pluck';
+import isEqual from 'lodash/lang/isEqual';
+
+import addCommas from 'add-commas';
 import Standardize from './../util/Standardize';
+
+const NUMBER_TO_DISPLAY = 2;
 
 function candidateHead(candidate, index) {
 
@@ -16,13 +24,59 @@ function candidateHead(candidate, index) {
 
 }
 
-function townRow() {
+function subunitRowResult(voteCount, totalVotes) {
+
+	const percent = totalVotes > 0 ? voteCount/totalVotes : 0;
 
 	return `
+		<td>
+			<div><span>${Standardize.percent(percent)}%</span></div>
+			<div><span>${addCommas(voteCount)}</span></div>
+		</td>
+	`;
 
-	<tr data-reactid=".0.6.1.0.1.$Abington"><td data-reactid=".0.6.1.0.1.$Abington.0"><div data-reactid=".0.6.1.0.1.$Abington.0.0"><span data-reactid=".0.6.1.0.1.$Abington.0.0.0"><a href="/news/politics/election-results/2014-11-04/town/MA/Abington?p1=BG_elections_town_results" data-reactid=".0.6.1.0.1.$Abington.0.0.0.0">Abington</a></span></div><div data-reactid=".0.6.1.0.1.$Abington.0.1"><span data-reactid=".0.6.1.0.1.$Abington.0.1.0"><span data-reactid=".0.6.1.0.1.$Abington.0.1.0.0">5</span><span data-reactid=".0.6.1.0.1.$Abington.0.1.0.1"> of </span><span data-reactid=".0.6.1.0.1.$Abington.0.1.0.2">5</span></span></div></td><td data-reactid=".0.6.1.0.1.$Abington.1:$39388934"><div data-reactid=".0.6.1.0.1.$Abington.1:$39388934.0"><span data-reactid=".0.6.1.0.1.$Abington.1:$39388934.0.0"><span data-reactid=".0.6.1.0.1.$Abington.1:$39388934.0.0.0">59.0</span><span data-reactid=".0.6.1.0.1.$Abington.1:$39388934.0.0.1">%</span></span></div><div data-reactid=".0.6.1.0.1.$Abington.1:$39388934.1"><span data-reactid=".0.6.1.0.1.$Abington.1:$39388934.1.0">3,458</span></div></td><td data-reactid=".0.6.1.0.1.$Abington.1:$39385862"><div data-reactid=".0.6.1.0.1.$Abington.1:$39385862.0"><span data-reactid=".0.6.1.0.1.$Abington.1:$39385862.0.0"><span data-reactid=".0.6.1.0.1.$Abington.1:$39385862.0.0.0">35.9</span><span data-reactid=".0.6.1.0.1.$Abington.1:$39385862.0.0.1">%</span></span></div><div data-reactid=".0.6.1.0.1.$Abington.1:$39385862.1"><span data-reactid=".0.6.1.0.1.$Abington.1:$39385862.1.0">2,104</span></div></td><td data-reactid=".0.6.1.0.1.$Abington.1:$39896838"><div data-reactid=".0.6.1.0.1.$Abington.1:$39896838.0"><span data-reactid=".0.6.1.0.1.$Abington.1:$39896838.0.0"><span data-reactid=".0.6.1.0.1.$Abington.1:$39896838.0.0.0">3.4</span><span data-reactid=".0.6.1.0.1.$Abington.1:$39896838.0.0.1">%</span></span></div><div data-reactid=".0.6.1.0.1.$Abington.1:$39896838.1"><span data-reactid=".0.6.1.0.1.$Abington.1:$39896838.1.0">202</span></div></td><td data-reactid=".0.6.1.0.1.$Abington.1:$39894790"><div data-reactid=".0.6.1.0.1.$Abington.1:$39894790.0"><span data-reactid=".0.6.1.0.1.$Abington.1:$39894790.0.0"><span data-reactid=".0.6.1.0.1.$Abington.1:$39894790.0.0.0">0.8</span><span data-reactid=".0.6.1.0.1.$Abington.1:$39894790.0.0.1">%</span></span></div><div data-reactid=".0.6.1.0.1.$Abington.1:$39894790.1"><span data-reactid=".0.6.1.0.1.$Abington.1:$39894790.1.0">49</span></div></td><td data-reactid=".0.6.1.0.1.$Abington.1:$39895814"><div data-reactid=".0.6.1.0.1.$Abington.1:$39895814.0"><span data-reactid=".0.6.1.0.1.$Abington.1:$39895814.0.0"><span data-reactid=".0.6.1.0.1.$Abington.1:$39895814.0.0.0">0.8</span><span data-reactid=".0.6.1.0.1.$Abington.1:$39895814.0.0.1">%</span></span></div><div data-reactid=".0.6.1.0.1.$Abington.1:$39895814.1"><span data-reactid=".0.6.1.0.1.$Abington.1:$39895814.1.0">45</span></div></td></tr>
+}
 
+function subunitRow(subunit, overallCandidateIds) {
 
+	// sort subunit candidates into overall candidate order
+	const theseCandidates = sortBy(subunit.candidates, function(candidate) {
+		return indexOf(overallCandidateIds, candidate.candidateID);
+	});
+
+	// really make sure they're the same order
+	if (!isEqual(pluck(theseCandidates, 'candidateID'), overallCandidateIds)) {
+		return '';
+	}
+
+	// get the subunit candidate vote counts
+	const voteCounts = pluck(theseCandidates, 'voteCount');
+
+	// get the total vote count
+	const totalVoteCount = voteCounts.reduce((x, y) => x + y);
+
+	// we are going to only display the first 2 candidates,
+	// and collapse the rest into an "other" column.
+
+	// get the first n candidates
+	const firstVotes = voteCounts.slice(0, NUMBER_TO_DISPLAY);
+
+	// get the rest of the candidates and add them up
+	const restOfVotes = voteCounts.slice(NUMBER_TO_DISPLAY)
+		.reduce((x, y) => x + y);
+
+	return `
+		<tr>
+			<td>
+				<div><span>${subunit.reportingunitName}</span></div>
+				<div><span>${subunit.precinctsReporting} of ${subunit.precinctsTotal}</span></div>
+			</td>
+
+			${firstVotes.map(x => subunitRowResult(x, totalVoteCount)).join('')}
+
+			${subunitRowResult(restOfVotes, totalVoteCount)}
+
+		</tr>
 	`;
 
 }
@@ -34,6 +88,10 @@ export default function townByTownTable(results) {
 
 	// sort candidates by ballot number and vote count
 	const candidates = sortByOrder(stateRU.candidates, ['voteCount', 'ballotOrder'], [false, true]);
+	const candidateIds = pluck(candidates, 'candidateID');
+
+	// get reporting units
+	const subunits = results.reportingUnits.filter(x => x.level === 'subunit');
 
 	return `
 
@@ -47,10 +105,16 @@ export default function townByTownTable(results) {
 						<div><span>Pcts. reporting</span></div>
 					</th>
 
-					${candidates.map((x, i) => candidateHead(x, i)).join('')}
+					${candidates.slice(0, NUMBER_TO_DISPLAY).map((x, i) => candidateHead(x, i)).join('')}
 
 				</tr>
 			</thead>
+
+			<tbody>
+
+				${subunits.map(x => subunitRow(x, candidateIds)).join('')}
+
+			</tbody>
 
 		</table>
 
