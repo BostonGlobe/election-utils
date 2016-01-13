@@ -19,8 +19,8 @@ function candidateRow(candidate, index, totalVoteCount) {
 		<div class='photo'><img alt='' src='assets/img/${index % 5}.png' /></div>
 		<div class='two-rows'>
 			<div class='name-and-pct'>
-				<div class='name'><span class='zeta'><span class='first'>${first}</span> <span class='last'>${last}</span></span></div>
-				<div class='pct'><span class='zeta'>${displayPct}%</span></div>
+				<div class='name'><span><span class='first'>${first}</span> <span class='last'>${last}</span></span></div>
+				<div class='pct'><span>${displayPct}%</span></div>
 			</div>
 			<div class='bar-and-votes'>
 				<div class='bar'><span style='width: ${displayPct}%' class='iota'>&nbsp;</span></div>
