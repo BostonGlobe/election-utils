@@ -24,7 +24,7 @@ function candidateRow(candidate, index, totalVoteCount) {
 				<div class='pct'><span class='epsilon'>${displayPct}%</span></div>
 			</div>
 			<div class='bar-and-votes'>
-				<div class='bar'><span style='width: ${displayPct}%' class='iota'>&nbsp;</span></div>
+				<div class='bar'><span class='iota wrapper'><span style='width: ${displayPct}%'>&nbsp;</span></span></div>
 				<div class='votes'><span class='iota'>${addCommas(voteCount)} votes</span></div>
 			</div>
 		</div>
@@ -56,14 +56,16 @@ export default function stateResultsSmallTable(results) {
 		.map(x => x.voteCount)
 		.reduce((x, y) => x + y);
 
+	const party = results.party.toLowerCase();
+
 	return `
 
-	<div class='title-and-updater'>
+	<div class='title-and-updater ${party}'>
 		<div class='title'><span class='iota'>${Standardize.expand.party(results.party)} ${Standardize.raceType(results.raceType)}</span></div>
 		<div class='updater'><span class='theta'>Update in 15</span></div>
 	</div>
 
-	<div class='results'>
+	<div class='results ${party}'>
 		${candidates.slice(0, MAX_NUMBER_TO_DISPLAY).map((x, i) => candidateRow(x, i, totalVoteCount)).join('')}
 	</div>
 
