@@ -20,11 +20,11 @@ function candidateRow(candidate, index, totalVoteCount) {
 		<div class='two-rows'>
 			<div class='name-and-pct'>
 				<div class='name'><span><span class='first'>${first}</span> <span class='last'>${last}</span></span></div>
+				<div class='votes'><span class='iota'>9,999,999 votes</span></div>
 				<div class='pct'><span>${displayPct}%</span></div>
 			</div>
 			<div class='bar-and-votes'>
 				<div class='bar'><span style='width: ${displayPct}%' class='iota'>&nbsp;</span></div>
-				<div class='votes'><span class='iota'>9,999,999 votes</span></div>
 			</div>
 		</div>
 	</div>
