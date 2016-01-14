@@ -59,8 +59,8 @@ export default function stateResultsSmallTable(results) {
 	return `
 
 	<div class='title-and-updater'>
-		<div class='title'><span>${Standardize.expand.party(results.party)} ${Standardize.raceType(results.raceType)}</span></div>
-		<div class='updater'><span>Update in 15</span></div>
+		<div class='title'><span class='iota'>${Standardize.expand.party(results.party)} ${Standardize.raceType(results.raceType)}</span></div>
+		<div class='updater'><span class='theta'>Update in 15</span></div>
 	</div>
 
 	<div class='results'>
@@ -68,8 +68,8 @@ export default function stateResultsSmallTable(results) {
 	</div>
 
 	<div class='precincts-and-more'>
-		<div class='precincts'><span class='iota'>${stateRU.precinctsReportingPct}% precincts reporting</span></div>
-		<div class='more'><a href=''>Complete results</a></div>
+		<div class='precincts'><span class='iota'>${stateRU.precinctsReportingPct}% reporting</span></div>
+		<div class='more'><a href='' class='theta'>See all <span class='extra'>results</span></a></div>
 	</div>
 
 	`;
