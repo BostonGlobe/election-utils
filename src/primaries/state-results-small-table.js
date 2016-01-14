@@ -2,7 +2,8 @@ import sortByOrder from 'lodash/collection/sortByOrder';
 import addCommas from 'add-commas';
 import Standardize from './../util/Standardize';
 
-const NUMBER_TO_PRIORITIZE = 2;
+const NUMBER_TO_PRIORITIZE = 3;
+const MAX_NUMBER_TO_DISPLAY = 6;
 
 function candidateRow(candidate, index, totalVoteCount) {
 
@@ -13,24 +14,32 @@ function candidateRow(candidate, index, totalVoteCount) {
 	const displayPct = Standardize.percent(percent);
 	const winnerTag  = candidate.winner === 'X' ? '<span class="winner">✔</span>' : '';
 
-	return `
 
+	const fancy = `
 	<div class='candidate-row fancy'>
 		<div class='photo'><img alt='' src='assets/img/${index % 5}.png' /></div>
 		<div class='two-rows'>
 			<div class='name-and-pct'>
-				<div class='name'><span><span class='first'>${first}</span> <span class='last'>${last}</span></span></div>
-				<div class='votes'><span class='iota'>9,999,999 votes</span></div>
-				<div class='pct'><span>${displayPct}%</span></div>
+				<div class='name'><span class='first epsilon'>${first}</span> <span class='last epsilon'>${last}</span></div>
+				<div class='pct'><span class='epsilon'>${displayPct}%</span></div>
 			</div>
 			<div class='bar-and-votes'>
 				<div class='bar'><span style='width: ${displayPct}%' class='iota'>&nbsp;</span></div>
+				<div class='votes'><span class='iota'>${addCommas(voteCount)} votes</span></div>
 			</div>
 		</div>
 	</div>
-
 	`;
-				// <div class='votes'><span class='theta'>${addCommas(voteCount)} votes</span></div>
+
+	const lite = `
+	<div class='candidate-row lite'>
+		<div class='name-and-votes-and-pct'>
+			<span class='name first eta'>${first}</span> <span class='name last eta'>${last}</span> <span class='votes iota'>${addCommas(voteCount)} votes</span> <span class='pct theta'>${displayPct}%</span>
+		</div>
+	</div>
+	`;
+
+	return index < NUMBER_TO_PRIORITIZE ? fancy : lite;
 
 }
 
@@ -55,7 +64,7 @@ export default function stateResultsSmallTable(results) {
 	</div>
 
 	<div class='results'>
-		${candidates.map((x, i) => candidateRow(x, i, totalVoteCount)).join('')}
+		${candidates.slice(0, MAX_NUMBER_TO_DISPLAY).map((x, i) => candidateRow(x, i, totalVoteCount)).join('')}
 	</div>
 
 	<div class='precincts-and-more'>
