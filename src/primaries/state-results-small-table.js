@@ -62,7 +62,6 @@ export default function stateResultsSmallTable(results) {
 
 	<div class='title-and-updater ${party}'>
 		<div class='title'><span class='iota'>${Standardize.expand.party(results.party)} ${Standardize.raceType(results.raceType)}</span></div>
-		<div class='updater'><span class='theta'>Update in 15</span></div>
 	</div>
 
 	<div class='results ${party}'>
