@@ -69,7 +69,7 @@ export default function stateResultsSmallTable(results) {
 	</div>
 
 	<div class='precincts-and-more'>
-		<div class='precincts'><span class='iota'>${stateRU.precinctsReportingPct}% reporting</span></div>
+		<div class='precincts'><span class='iota'>${stateRU.precinctsReportingPct}% <span class='extra'>precincts</span> reporting</span></div>
 		<div class='more'><a href='' class='theta'>See all <span class='extra'>results</span></a></div>
 	</div>
 
