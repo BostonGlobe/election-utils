@@ -7,7 +7,7 @@
   "scripts": {
     "clean": "rimraf build",
     "build:cjs": "rollup -c -f cjs -i src/index.js -o build/index.js",
-    "build:es6": "rollup           -i src/index.js -o build/index.es6.js",
+    "build:es6": "rollup -c        -i src/index.js -o build/index.es6.js",
     "build": "npm run clean && npm run build:cjs && npm run build:es6",
     "prepublish": "npm run build && npm run test",
     "test": "node test/**/*.js | faucet",
