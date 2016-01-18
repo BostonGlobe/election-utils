@@ -13,8 +13,11 @@ This module provides various utility functions for dealing with AP election data
 ``` js
 import { Standardize } from 'election-utils';
 ```
-<a name="expand-state" href="#expand-state">#</a> Standardize.<b>expand.state</b>(<i>state</i>)
+<a name="expand-state" href="#expand-state">#</a> Standardize.<b>expand.state</b>(<i>stateAbbreviation</i>)
 
-## Build
+Expands a state abbreviation to its title-case name.
 
-- `npm run build`
+```js
+Standardize.expand.state('nh');
+// => New Hampshire
+```
