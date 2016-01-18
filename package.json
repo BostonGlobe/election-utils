@@ -1,7 +1,7 @@
 {
   "name": "election-utils",
   "version": "1.0.3",
-  "description": "",
+  "description": "This module provides various utility functions for dealing with AP election data.",
   "main": "build/index.js",
   "jsnext:main": "build/index.es6.js",
   "scripts": {
@@ -27,5 +27,20 @@
     "tap-notify": "0.0.3",
     "tape": "^4.4.0",
     "tape-watch": "^1.3.0"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BostonGlobe/election-utils.git"
+  },
+  "keywords": [
+    "elections",
+    "AP"
+  ],
+  "bugs": {
+    "url": "https://github.com/BostonGlobe/election-utils/issues"
+  },
+  "homepage": "https://github.com/BostonGlobe/election-utils#readme"
 }
