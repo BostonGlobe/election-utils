@@ -1,5 +1,5 @@
 {
-  "name": "election-components",
+  "name": "election-utils",
   "version": "1.0.1",
   "description": "",
   "main": "build/index.js",
@@ -16,8 +16,6 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "add-commas": "0.0.4",
-    "lodash": "^3.10.1",
     "united-states": "^1.0.0"
   },
   "devDependencies": {

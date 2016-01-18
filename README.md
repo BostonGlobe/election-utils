@@ -1,4 +1,4 @@
-# election-components
+# election-utils
 
 ## Install
 
