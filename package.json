@@ -1,6 +1,6 @@
 {
   "name": "election-utils",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "build/index.js",
   "jsnext:main": "build/index.es6.js",
@@ -13,7 +13,7 @@
     "test": "node test/**/*.js | faucet",
     "test:watch": "tape-watch test/**/*.js -p faucet"
   },
-  "author": "",
+  "author": "Gabriel Florit",
   "license": "MIT",
   "dependencies": {
     "united-states": "^1.0.0"
