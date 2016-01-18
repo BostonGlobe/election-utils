@@ -53,3 +53,19 @@ Collapse a party name to its abbreviation. *partyName* is case-insensitive.
 Standardize.collapse.party('democratic');
 // => DEM
 ```
+
+
+<a name="raceType" href="#raceType">#</a> Standardize.<b>raceType</b>(<i>raceType</i>, <i>invert</i>)
+
+Convert race type to its appropriate name. Set *invert* to *true* to convert back to what AP gives us.
+
+```js
+Standardize.raceType('Caucus');
+// => Caucuses
+
+Standardize.raceType('Primary');
+// => Primary
+
+Standardize.raceType('Caucuses', true);
+// => Caucus
+```
