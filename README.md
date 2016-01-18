@@ -8,7 +8,7 @@ This module provides various utility functions for dealing with AP election data
 
 ## API Reference
 
-*Note:* currently the API is rather verbose and somewhat unintuitive. This will probably change in the future.
+**Note:** currently the API is rather verbose and somewhat unintuitive. This will probably change in the future.
 
 #### Standardize
 
