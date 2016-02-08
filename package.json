@@ -16,6 +16,7 @@
   "author": "Gabriel Florit",
   "license": "MIT",
   "dependencies": {
+    "lodash.orderby": "^4.0.2",
     "united-states": "^1.0.0"
   },
   "devDependencies": {
