@@ -1,9 +1,16 @@
 # isWinner
 
-This function adds one to its input.
+Determine if this candidate is the winner.
+Will respect winnerOverride if present.
 
 **Parameters**
 
--   `candidate` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** any number
+-   `candidate` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** the candidate
 
-Returns **[Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** that number, plus one.
+**Examples**
+
+```javascript
+Candidate.isWinner(winningCandidate) //=> true
+```
+
+Returns **[Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** whether candidate is winner

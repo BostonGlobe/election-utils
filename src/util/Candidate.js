@@ -1,9 +1,14 @@
 const Candidate = {
 
 	/**
-	 * This function adds one to its input.
-	 * @param {Object} candidate any number
-	 * @returns {Boolean} that number, plus one.
+	 * Determine if this candidate is the winner.
+	 * Will respect winnerOverride if present.
+	 *
+	 * @param {Object} candidate the candidate
+	 * @returns {Boolean} whether candidate is winner
+	 *
+	 * @example
+	 * Candidate.isWinner(winningCandidate) //=> true
 	 */
 	isWinner: (candidate) => {
 
