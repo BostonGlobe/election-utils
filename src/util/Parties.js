@@ -1,4 +1,4 @@
-const Parties = [
+const parties = [
 	{
 		abbr: 'DEM',
 		name: 'Democratic'
@@ -9,4 +9,4 @@ const Parties = [
 	}
 ];
 
-export default Parties;
+export default parties;

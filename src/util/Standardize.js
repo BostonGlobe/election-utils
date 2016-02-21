@@ -1,7 +1,7 @@
 import unitedStates from 'united-states';
-import Parties from './Parties';
+import parties from './parties';
 
-const Standardize = {
+const standardize = {
 
 	expand: {
 
@@ -10,7 +10,7 @@ const Standardize = {
 		},
 
 		party: function(abbr) {
-			return Parties.filter(party => party.abbr === abbr.toUpperCase())[0].name;
+			return parties.filter(party => party.abbr === abbr.toUpperCase())[0].name;
 		}
 
 	},
@@ -22,7 +22,7 @@ const Standardize = {
 		},
 
 		party: function(name) {
-			return Parties.filter(party => party.name.toLowerCase() === name.toLowerCase())[0].abbr;
+			return parties.filter(party => party.name.toLowerCase() === name.toLowerCase())[0].abbr;
 		}
 
 	},
@@ -47,4 +47,4 @@ const Standardize = {
 
 };
 
-export default Standardize;
+export default standardize;

@@ -1,9 +1,13 @@
-import Standardize from './util/Standardize';
-import IsWinner from './util/IsWinner';
 import Candidates from './util/Candidates';
+import Candidate from './util/Candidate';
+import standardize from './util/standardize';
+import parties from './util/parties';
+import raceTypes from './util/raceTypes';
 
 export {
-	Standardize,
 	Candidates,
-	IsWinner
+	Candidate,
+	standardize,
+	parties,
+	raceTypes
 };

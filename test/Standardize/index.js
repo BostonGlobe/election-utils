@@ -1,30 +1,30 @@
 const test = require('tape');
-const Standardize = require('./../../build/index').Standardize;
+const standardize = require('./../../build/index').standardize;
 
 test('expand.state', (assert) => {
-	assert.equal(Standardize.expand.state('iA'), 'Iowa');
+	assert.equal(standardize.expand.state('iA'), 'Iowa');
 	assert.end();
 });
 
 test('expand.party', (assert) => {
-	assert.equal(Standardize.expand.party('dEm'), 'Democratic');
+	assert.equal(standardize.expand.party('dEm'), 'Democratic');
 	assert.end();
 });
 
 test('collapse.state', (assert) => {
-	assert.equal(Standardize.collapse.state('iOwA'), 'IA');
+	assert.equal(standardize.collapse.state('iOwA'), 'IA');
 	assert.end();
 });
 
 test('collapse.party', (assert) => {
-	assert.equal(Standardize.collapse.party('demOcraTIC'), 'DEM');
+	assert.equal(standardize.collapse.party('demOcraTIC'), 'DEM');
 	assert.end();
 });
 
 test('raceType', (assert) => {
-	assert.equal(Standardize.raceType('Caucus'), 'Caucuses');
-	assert.equal(Standardize.raceType('Caucuses'), 'Caucuses');
-	assert.equal(Standardize.raceType('Caucuses', true), 'Caucus');
-	assert.equal(Standardize.raceType('Primary'), 'Primary');
+	assert.equal(standardize.raceType('Caucus'), 'Caucuses');
+	assert.equal(standardize.raceType('Caucuses'), 'Caucuses');
+	assert.equal(standardize.raceType('Caucuses', true), 'Caucus');
+	assert.equal(standardize.raceType('Primary'), 'Primary');
 	assert.end();
 });
