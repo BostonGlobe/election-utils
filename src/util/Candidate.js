@@ -1,5 +1,10 @@
 const Candidate = {
 
+	/**
+	 * This function adds one to its input.
+	 * @param {Object} candidate any number
+	 * @returns {Boolean} that number, plus one.
+	 */
 	isWinner: (candidate) => {
 
 		const { winner, winnerOverride } = candidate;
