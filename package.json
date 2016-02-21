@@ -12,7 +12,7 @@
     "prepublish": "npm run build && npm run test",
     "test": "node test/**/*.js | faucet",
     "test:watch": "tape-watch test/**/*.js -p faucet",
-		"doc": "BABEL_ENV=doc babel src -d .tmp && documentation build .tmp/**/*.js -o doc -f html"
+		"doc": "BABEL_ENV=doc babel src -d .tmp && documentation build .tmp/**/*.js -o doc -f md"
   },
   "author": "Gabriel Florit",
   "license": "MIT",
