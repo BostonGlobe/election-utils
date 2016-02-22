@@ -1,6 +1,6 @@
 {
   "name": "election-utils",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "This module provides various utility functions for dealing with AP election data.",
   "main": "build/index.js",
   "jsnext:main": "build/index.es6.js",
@@ -12,8 +12,8 @@
     "prepublish": "BABEL_ENV=rollup npm run build && npm run test",
     "test": "node test/**/*.js | faucet",
     "test:watch": "tape-watch test/**/*.js -p faucet",
-		"doc": "BABEL_ENV=doc babel src -d .tmp && documentation build .tmp/**/*.js -o doc.md -f md",
-		"doc:html": "BABEL_ENV=doc babel src -d .tmp && documentation build .tmp/**/*.js -o doc.html -f html"
+    "doc": "BABEL_ENV=doc babel src -d .tmp && documentation build .tmp/**/*.js -o doc.md -f md",
+    "doc:html": "BABEL_ENV=doc babel src -d .tmp && documentation build .tmp/**/*.js -o doc.html -f html"
   },
   "author": "Gabriel Florit",
   "license": "MIT",

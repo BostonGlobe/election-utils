@@ -172,6 +172,17 @@ import { parties } from 'election-utils'
 parties[0] //=> { abbr: 'DEM', name: 'Democratic' }
 ```
 
+# primaries2016Dates
+
+An array of 2016 primaries dates, each with `stateAbbr`, `party`, `date` and `raceType` properties.
+
+**Examples**
+
+```javascript
+import { primaries2016Dates } from 'election-utils'
+primaries2016Dates[0] //=> { stateAbbr: 'IA', party: 'Democratic', date: '2016-02-01', ... }
+```
+
 # raceTypes
 
 An array of race types.
