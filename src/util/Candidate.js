@@ -1,3 +1,9 @@
+/**
+ * Various Candidate helper functions.
+ * @module Candidate
+ * @example
+ * import { Candidate } from 'election-utils'
+ */
 const Candidate = {
 
 	/**
@@ -6,8 +12,8 @@ const Candidate = {
 	 *
 	 * @param {Object} candidate the candidate
 	 * @returns {Boolean} whether candidate is winner
-	 *
 	 * @example
+	 * Candidate.isWinner(winningCandidate) //=> true
 	 * Candidate.isWinner(winningCandidate) //=> true
 	 */
 	isWinner: (candidate) => {
