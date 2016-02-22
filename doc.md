@@ -67,7 +67,17 @@ Candidates.sort(myCandidates) //=> mySortedCandidates
 
 Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** a new array of Candidates, sorted. Does not mutate original array.
 
-# party
+# standardize
+
+Provides various functions to standardize AP data.
+
+**Examples**
+
+```javascript
+import { standardize } from 'election-utils'
+```
+
+## collapseParty
 
 Collapses a party name to its upper-case abbreviation.
 
@@ -78,12 +88,28 @@ Collapses a party name to its upper-case abbreviation.
 **Examples**
 
 ```javascript
-standardize.collapse.party('democratic') //=> 'DEM'
+standardize.collapseParty('democratic') //=> 'DEM'
 ```
 
 Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** the party's upper-case abbreviation.
 
-# party
+## collapseState
+
+Collapses a state name to its upper-case abbreviation.
+
+**Parameters**
+
+-   `name` **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** state name. Case insensitive.
+
+**Examples**
+
+```javascript
+standardize.collapseState('iowa') //=> 'IA'
+```
+
+Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** the state's upper-case abbreviation.
+
+## expandParty
 
 Expands a party abbreviation to its title-case name.
 
@@ -94,20 +120,26 @@ Expands a party abbreviation to its title-case name.
 **Examples**
 
 ```javascript
-standardize.expand.party('dem') //=> 'Democratic'
+standardize.expandParty('dem') //=> 'Democratic'
 ```
 
 Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** the party's title-case name.
 
-# standardize
+## expandState
 
-Provides various functions to standardize AP data.
+Expands a state abbreviation to its title-case name.
+
+**Parameters**
+
+-   `abbr` **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** state abbreviation. Case insensitive.
 
 **Examples**
 
 ```javascript
-import { standardize } from 'election-utils'
+standardize.expandState('ia') //=> 'Iowa'
 ```
+
+Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** the state's title-case name.
 
 ## raceType
 
@@ -129,35 +161,3 @@ standardize.raceType('Caucuses', true) //=> 'Caucus'
 ```
 
 Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
-
-# state
-
-Expands a state abbreviation to its title-case name.
-
-**Parameters**
-
--   `abbr` **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** state abbreviation. Case insensitive.
-
-**Examples**
-
-```javascript
-standardize.expand.state('ia') //=> 'Iowa'
-```
-
-Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** the state's title-case name.
-
-# state
-
-Collapses a state name to its upper-case abbreviation.
-
-**Parameters**
-
--   `name` **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** state name. Case insensitive.
-
-**Examples**
-
-```javascript
-standardize.collapse.state('iowa') //=> 'IA'
-```
-
-Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** the state's upper-case abbreviation.
