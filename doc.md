@@ -148,8 +148,7 @@ Set `invert` to `true` to convert back to what AP gives us.
 
 **Parameters**
 
--   `raceType` **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** the race type, e.g. 'Caucuses'.
--   `_raceType`  
+-   `rType` **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** the race type, e.g. 'Caucuses'.
 -   `invert` **[Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** whether to invert back to what AP gives us.
 
 **Examples**

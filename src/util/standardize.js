@@ -61,7 +61,7 @@ const standardize = {
 	 * Convert race type to its appropriate name.
 	 * Set `invert` to `true` to convert back to what AP gives us.
 	 *
-	 * @param {String} raceType the race type, e.g. 'Caucuses'.
+	 * @param {String} rType the race type, e.g. 'Caucuses'.
 	 * @param {Boolean} invert whether to invert back to what AP gives us.
 	 * @returns {String}
 	 * @example
@@ -69,8 +69,8 @@ const standardize = {
 	 * standardize.raceType('Primary') //=> 'Primary'
 	 * standardize.raceType('Caucuses', true) //=> 'Caucus'
 	 */
-	raceType: function(raceType, invert) {
-		return invert ? raceType.replace(/aucuses$/, 'aucus') : raceType.replace(/aucus$/, 'aucuses');
+	raceType: function(rType, invert) {
+		return invert ? rType.replace(/aucuses$/, 'aucus') : rType.replace(/aucus$/, 'aucuses');
 	},
 
 	percent: function(x, shorten) {
