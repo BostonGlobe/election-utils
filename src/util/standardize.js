@@ -9,60 +9,52 @@ import parties from './parties';
  */
 const standardize = {
 
-	expand: {
-
-		/**
-		 * Expands a state abbreviation to its title-case name.
-		 *
-		 * @param {String} abbr state abbreviation. Case insensitive.
-		 * @returns {String} the state's title-case name.
-		 * @example
-		 * standardize.expand.state('ia') //=> 'Iowa'
-		 */
-		state: function(abbr) {
-			return unitedStates.filter(state => state.abbr === abbr.toUpperCase())[0].name;
-		},
-
-		/**
-		 * Expands a party abbreviation to its title-case name.
-		 *
-		 * @param {String} abbr party abbreviation. Case insensitive.
-		 * @returns {String} the party's title-case name.
-		 * @example
-		 * standardize.expand.party('dem') //=> 'Democratic'
-		 */
-		party: function(abbr) {
-			return parties.filter(party => party.abbr === abbr.toUpperCase())[0].name;
-		}
-
+	/**
+	 * Expands a state abbreviation to its title-case name.
+	 *
+	 * @param {String} abbr state abbreviation. Case insensitive.
+	 * @returns {String} the state's title-case name.
+	 * @example
+	 * standardize.expandState('ia') //=> 'Iowa'
+	 */
+	expandState: function(abbr) {
+		return unitedStates.filter(state => state.abbr === abbr.toUpperCase())[0].name;
 	},
 
-	collapse: {
+	/**
+	 * Expands a party abbreviation to its title-case name.
+	 *
+	 * @param {String} abbr party abbreviation. Case insensitive.
+	 * @returns {String} the party's title-case name.
+	 * @example
+	 * standardize.expandParty('dem') //=> 'Democratic'
+	 */
+	expandParty: function(abbr) {
+		return parties.filter(party => party.abbr === abbr.toUpperCase())[0].name;
+	},
 
-		/**
-		 * Collapses a state name to its upper-case abbreviation.
-		 *
-		 * @param {String} name state name. Case insensitive.
-		 * @returns {String} the state's upper-case abbreviation.
-		 * @example
-		 * standardize.collapse.state('iowa') //=> 'IA'
-		 */
-		state: function(name) {
-			return unitedStates.filter(state => state.name.toLowerCase() === name.toLowerCase())[0].abbr;
-		},
+	/**
+	 * Collapses a state name to its upper-case abbreviation.
+	 *
+	 * @param {String} name state name. Case insensitive.
+	 * @returns {String} the state's upper-case abbreviation.
+	 * @example
+	 * standardize.collapseState('iowa') //=> 'IA'
+	 */
+	collapseState: function(name) {
+		return unitedStates.filter(state => state.name.toLowerCase() === name.toLowerCase())[0].abbr;
+	},
 
-		/**
-		 * Collapses a party name to its upper-case abbreviation.
-		 *
-		 * @param {String} name party name. Case insensitive.
-		 * @returns {String} the party's upper-case abbreviation.
-		 * @example
-		 * standardize.collapse.party('democratic') //=> 'DEM'
-		 */
-		party: function(name) {
-			return parties.filter(party => party.name.toLowerCase() === name.toLowerCase())[0].abbr;
-		}
-
+	/**
+	 * Collapses a party name to its upper-case abbreviation.
+	 *
+	 * @param {String} name party name. Case insensitive.
+	 * @returns {String} the party's upper-case abbreviation.
+	 * @example
+	 * standardize.collapseParty('democratic') //=> 'DEM'
+	 */
+	collapseParty: function(name) {
+		return parties.filter(party => party.name.toLowerCase() === name.toLowerCase())[0].abbr;
 	},
 
 	/**

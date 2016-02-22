@@ -1,6 +1,6 @@
 {
   "name": "election-utils",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "This module provides various utility functions for dealing with AP election data.",
   "main": "build/index.js",
   "jsnext:main": "build/index.es6.js",
@@ -8,8 +8,8 @@
     "clean": "rimraf build && rimraf .tmp",
     "build:cjs": "rollup -c -f cjs -i src/index.js -o build/index.js",
     "build:es6": "rollup -c        -i src/index.js -o build/index.es6.js",
-    "build": "BABEL_ENV=rollup npm run clean && npm run build:cjs && npm run build:es6",
-    "prepublish": "npm run build && npm run test",
+    "build": "npm run clean && npm run build:cjs && npm run build:es6",
+    "prepublish": "BABEL_ENV=rollup npm run build && npm run test",
     "test": "node test/**/*.js | faucet",
     "test:watch": "tape-watch test/**/*.js -p faucet",
 		"doc": "BABEL_ENV=doc babel src -d .tmp && documentation build .tmp/**/*.js -o doc.md -f md",

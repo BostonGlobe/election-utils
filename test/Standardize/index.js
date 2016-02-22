@@ -1,23 +1,23 @@
 const test = require('tape');
 const standardize = require('./../../build/index').standardize;
 
-test('expand.state', (assert) => {
-	assert.equal(standardize.expand.state('iA'), 'Iowa');
+test('expandState', (assert) => {
+	assert.equal(standardize.expandState('iA'), 'Iowa');
 	assert.end();
 });
 
-test('expand.party', (assert) => {
-	assert.equal(standardize.expand.party('dEm'), 'Democratic');
+test('expandParty', (assert) => {
+	assert.equal(standardize.expandParty('dEm'), 'Democratic');
 	assert.end();
 });
 
-test('collapse.state', (assert) => {
-	assert.equal(standardize.collapse.state('iOwA'), 'IA');
+test('collapseState', (assert) => {
+	assert.equal(standardize.collapseState('iOwA'), 'IA');
 	assert.end();
 });
 
-test('collapse.party', (assert) => {
-	assert.equal(standardize.collapse.party('demOcraTIC'), 'DEM');
+test('collapseParty', (assert) => {
+	assert.equal(standardize.collapseParty('demOcraTIC'), 'DEM');
 	assert.end();
 });
 
