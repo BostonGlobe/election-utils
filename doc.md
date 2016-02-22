@@ -175,6 +175,7 @@ parties[0] //=> { abbr: 'DEM', name: 'Democratic' }
 # primaries2016Dates
 
 An array of 2016 primaries dates, each with `stateAbbr`, `party`, `date` and `raceType` properties.
+Only contains state presidential primaries.
 
 **Examples**
 

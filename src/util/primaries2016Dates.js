@@ -1,5 +1,6 @@
 /**
  * An array of 2016 primaries dates, each with `stateAbbr`, `party`, `date` and `raceType` properties.
+ * Only contains state presidential primaries.
  * @module primaries2016Dates
  * @example
  * import { primaries2016Dates } from 'election-utils'
