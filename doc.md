@@ -11,7 +11,7 @@ import { Candidate } from 'election-utils'
 ## isWinner
 
 Determine if this candidate is the winner.
-Will respect winnerOverride if present.
+Will respect `winnerOverride` if present.
 
 **Parameters**
 
@@ -20,7 +20,6 @@ Will respect winnerOverride if present.
 **Examples**
 
 ```javascript
-Candidate.isWinner(winningCandidate) //=> true
 Candidate.isWinner(winningCandidate) //=> true
 ```
 
@@ -43,7 +42,6 @@ Get the candidates' total vote count.
 **Parameters**
 
 -   `candidates` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** an array of Candidates
--   `cs`  
 
 **Examples**
 
@@ -60,7 +58,6 @@ Sort candidates by vote count and ballot order, in that order.
 **Parameters**
 
 -   `candidates` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** an array of Candidates
--   `cs`  
 
 **Examples**
 

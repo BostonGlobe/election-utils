@@ -16,7 +16,7 @@ const Candidates = {
 	 * @example
 	 * Candidates.getVoteCount(myCandidates) //=> 123
 	 */
-	getVoteCount: (cs) => cs.map(x => x.voteCount).reduce((x, y) => x + y, 0),
+	getVoteCount: (candidates) => candidates.map(x => x.voteCount).reduce((x, y) => x + y, 0),
 
 	/**
 	 * Sort candidates by vote count and ballot order, in that order.
@@ -26,7 +26,7 @@ const Candidates = {
 	 * @example
 	 * Candidates.sort(myCandidates) //=> mySortedCandidates
 	 */
-	sort: (cs) => orderBy(cs, ['voteCount', 'ballotOrder'], ['desc', 'asc'])
+	sort: (candidates) => orderBy(candidates, ['voteCount', 'ballotOrder'], ['desc', 'asc'])
 
 };
 

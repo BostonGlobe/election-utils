@@ -8,12 +8,11 @@ const Candidate = {
 
 	/**
 	 * Determine if this candidate is the winner.
-	 * Will respect winnerOverride if present.
+	 * Will respect `winnerOverride` if present.
 	 *
 	 * @param {Object} candidate the candidate
 	 * @returns {Boolean} whether candidate is winner
 	 * @example
-	 * Candidate.isWinner(winningCandidate) //=> true
 	 * Candidate.isWinner(winningCandidate) //=> true
 	 */
 	isWinner: (candidate) => {
