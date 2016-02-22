@@ -63,7 +63,7 @@ const standardize = {
 	 *
 	 * @param {String} rType the race type, e.g. 'Caucuses'.
 	 * @param {Boolean} invert whether to invert back to what AP gives us.
-	 * @returns {String}
+	 * @returns {String} the converted race type.
 	 * @example
 	 * standardize.raceType('Caucus') //=> 'Caucuses'
 	 * standardize.raceType('Primary') //=> 'Primary'

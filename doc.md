@@ -159,4 +159,26 @@ standardize.raceType('Primary') //=> 'Primary'
 standardize.raceType('Caucuses', true) //=> 'Caucus'
 ```
 
-Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** the converted race type.
+
+# parties
+
+An array of parties, each with an `abbr` and `name` property.
+
+**Examples**
+
+```javascript
+import { parties } from 'election-utils'
+parties[0] //=> { abbr: 'DEM', name: 'Democratic' }
+```
+
+# raceTypes
+
+An array of race types.
+
+**Examples**
+
+```javascript
+import { raceTypes } from 'election-utils'
+raceTypes[0] //=> 'Caucuses'
+```
