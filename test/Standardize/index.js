@@ -3,6 +3,7 @@ const standardize = require('./../../build/index').standardize;
 
 test('expandState', (assert) => {
 	assert.equal(standardize.expandState('iA'), 'Iowa');
+	assert.equal(standardize.expandState('Gu'), 'Guam');
 	assert.end();
 });
 
@@ -13,6 +14,7 @@ test('expandParty', (assert) => {
 
 test('collapseState', (assert) => {
 	assert.equal(standardize.collapseState('iOwA'), 'IA');
+	assert.equal(standardize.collapseState('GuAm'), 'GU');
 	assert.end();
 });
 
