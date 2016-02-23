@@ -9,91 +9,91 @@ const primaries2016Candidates = [
 	{ 
 		"last": "bush",
 		"first": "jeb",
-		"party": "republican"
+		"party": "republican",
 		"suspendedDate": "2016-02-19"
 	},
 	{ 
 		"last": "carson",
 		"first": "ben",
-		"party": "republican"
+		"party": "republican",
 		"suspendedDate": false
 	},
 	{ 
 		"last": "christie",
 		"first": "chris",
-		"party": "republican"
+		"party": "republican",
 		"suspendedDate": "2016-02-10"
 	},
 	{ 
 		"last": "clinton",
 		"first": "hillary",
-		"party": "democratic"
+		"party": "democratic",
 		"suspendedDate": false
 	},
 	{ 
 		"last": "cruz",
 		"first": "ted",
-		"party": "republican"
+		"party": "republican",
 		"suspendedDate": false
 	},
 	{ 
 		"last": "fiorina",
 		"first": "carly",
-		"party": "republican"
+		"party": "republican",
 		"suspendedDate": "2016-02-10"
 	},
 	{ 
 		"last": "gilmore",
 		"first": "jim",
-		"party": "republican"
+		"party": "republican",
 		"suspendedDate": "2016-02-12"
 	},
 	{ 
 		"last": "huckabee",
 		"first": "mike",
-		"party": "republican"
+		"party": "republican",
 		"suspendedDate": "2016-02-01"
 	},
 	{ 
 		"last": "kasich",
 		"first": "john",
-		"party": "republican"
+		"party": "republican",
 		"suspendedDate": false
 	},
 	{ 
 		"last": "o'malley",
 		"first": "martin",
-		"party": "democratic"
+		"party": "democratic",
 		"suspendedDate": "2016-02-01"
 	},
 	{ 
 		"last": "paul",
 		"first": "rand",
-		"party": "republican"
+		"party": "republican",
 		"suspendedDate": "2016-02-03"
 	},
 	{ 
 		"last": "rubio",
 		"first": "marco",
-		"party": "republican"
+		"party": "republican",
 		"suspendedDate": false
 	},
 	{ 
 		"last": "sanders",
 		"first": "bernie",
-		"party": "republican"
+		"party": "republican",
 		"suspendedDate": false
 	},
 	{ 
 		"last": "santorum",
 		"first": "rick",
-		"party": "republican"
+		"party": "republican",
 		"suspendedDate": "2016-02-03"
 	},
 	{ 
 		"last": "trump",
 		"first": "donald",
-		"party": "republican"
+		"party": "republican",
 		"suspendedDate": false
 	}
 ];
