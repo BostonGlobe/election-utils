@@ -1,6 +1,6 @@
 {
   "name": "election-utils",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "This module provides various utility functions for dealing with AP election data.",
   "main": "build/index.js",
   "jsnext:main": "build/index.es6.js",
@@ -19,7 +19,7 @@
   "license": "MIT",
   "dependencies": {
     "lodash.orderby": "^4.0.2",
-    "united-states": "^1.0.0"
+    "united-states": "github:bostonglobe/united-states"
   },
   "devDependencies": {
     "babel-cli": "^6.5.1",

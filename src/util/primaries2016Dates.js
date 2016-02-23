@@ -92,12 +92,6 @@ const primaries2016Dates = [
 		"raceType": "Caucuses"
 	},
 	{
-		"stateAbbr": "CO",
-		"party": "Republican",
-		"date": "2016-03-01",
-		"raceType": "Caucuses"
-	},
-	{
 		"stateAbbr": "GA",
 		"party": "Democratic",
 		"date": "2016-03-01",
@@ -192,12 +186,6 @@ const primaries2016Dates = [
 		"party": "Republican",
 		"date": "2016-03-01",
 		"raceType": "Primary"
-	},
-	{
-		"stateAbbr": "WY",
-		"party": "Republican",
-		"date": "2016-03-01",
-		"raceType": "Caucuses"
 	},
 	{
 		"stateAbbr": "KS",
@@ -248,6 +236,12 @@ const primaries2016Dates = [
 		"raceType": "Caucuses"
 	},
 	{
+		"stateAbbr": "PR",
+		"party": "Republican",
+		"date": "2016-03-06",
+		"raceType": "Primary"
+	},
+	{
 		"stateAbbr": "HI",
 		"party": "Republican",
 		"date": "2016-03-08",
@@ -282,12 +276,6 @@ const primaries2016Dates = [
 		"party": "Republican",
 		"date": "2016-03-08",
 		"raceType": "Primary"
-	},
-	{
-		"stateAbbr": "DC",
-		"party": "Republican",
-		"date": "2016-03-12",
-		"raceType": "Caucuses"
 	},
 	{
 		"stateAbbr": "FL",
@@ -395,12 +383,6 @@ const primaries2016Dates = [
 		"stateAbbr": "WA",
 		"party": "Democratic",
 		"date": "2016-03-26",
-		"raceType": "Caucuses"
-	},
-	{
-		"stateAbbr": "ND",
-		"party": "Republican",
-		"date": "2016-04-01",
 		"raceType": "Caucuses"
 	},
 	{
@@ -546,6 +528,12 @@ const primaries2016Dates = [
 		"party": "Republican",
 		"date": "2016-05-24",
 		"raceType": "Primary"
+	},
+	{
+		"stateAbbr": "PR",
+		"party": "Democratic",
+		"date": "2016-06-05",
+		"raceType": "Caucuses"
 	},
 	{
 		"stateAbbr": "CA",
