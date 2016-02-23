@@ -1,5 +1,5 @@
 /**
- * An array of 2016 primaries dates, each with `stateAbbr`, `party`, `date` and `raceType` properties.
+ * An array of 2016 (AP tabulated) primaries dates, each with `stateAbbr`, `party`, `date` and `raceType` properties.
  * Only contains state presidential primaries.
  * @module primaries2016Dates
  * @example
