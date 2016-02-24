@@ -19,7 +19,7 @@
   "license": "MIT",
   "dependencies": {
     "lodash.orderby": "^4.0.2",
-    "united-states": "github:bostonglobe/united-states"
+    "united-states": "^2.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.5.1",
