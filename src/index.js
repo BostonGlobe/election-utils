@@ -4,6 +4,7 @@ import standardize from './util/standardize';
 import parties from './util/parties';
 import raceTypes from './util/raceTypes';
 import primaries2016Dates from './util/primaries2016Dates.js';
+import primaries2016Candidates from './util/primaries2016Candidates.js';
 
 export {
 	Candidates,
@@ -11,5 +12,6 @@ export {
 	standardize,
 	parties,
 	raceTypes,
-	primaries2016Dates
+	primaries2016Dates,
+	primaries2016Candidates
 };
