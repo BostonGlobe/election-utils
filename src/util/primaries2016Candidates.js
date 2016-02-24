@@ -81,7 +81,7 @@ const primaries2016Candidates = [
 	{ 
 		"last": "sanders",
 		"first": "bernie",
-		"party": "republican",
+		"party": "democratic",
 		"suspendedDate": false
 	},
 	{ 
