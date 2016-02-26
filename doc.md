@@ -185,7 +185,7 @@ primaries2016Candidates[0] //=> { 'last': 'bush', 'first': 'jeb', 'party': 'repu
 
 # primaries2016Dates
 
-An array of 2016 (AP tabulated) primaries dates, each with `stateAbbr`, `party`, `date` and `raceType` properties.
+An array of 2016 (AP tabulated) primaries dates, each with `stateAbbr`, `party`, `date`, `raceType`, and `resultsNote` properties.
 Only contains state presidential primaries.
 
 **Examples**
