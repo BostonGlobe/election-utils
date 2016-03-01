@@ -8,13 +8,13 @@ import dateFormat from 'dateformat'
  * @returns {String} the formatted timestamp
  * @example
  * import { formatTimestamp } from 'election-utils'
- * formatTimestamp(results) //=> 'Mar 1 2:26 PM EST'
+ * formatTimestamp(results) //=> 'Mar. 1 2:26 PM EST'
  */
 export default function formatTimestamp({ timestamp }) {
 
 	const date = new Date(timestamp)
 
-	const dateString = dateFormat(date, 'mmm d h:MM TT Z')
+	const dateString = dateFormat(date, 'mmm. d h:MM TT Z')
 
 	return dateString
 }
