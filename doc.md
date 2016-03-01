@@ -189,13 +189,14 @@ Useful for displaying `last updated`.
 
 **Parameters**
 
--   `$0.timestamp` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** a timestamp
+-   `$0.timestamp` **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** a timestamp
 -   `_ref`  
 
 **Examples**
 
 ```javascript
-undefined
+import { formatTimestamp } from 'election-utils'
+formatTimestamp(results) //=> 'Mar 1 2:26 PM EST'
 ```
 
 Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** the formatted timestamp
