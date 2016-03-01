@@ -1,10 +1,11 @@
 {
 	"env": {
 		"rollup": {
-			"presets": [ "es2015-rollup" ]
+			"presets": ["es2015-rollup"],
+			"plugins": ["syntax-object-rest-spread", "transform-object-rest-spread"]
 		},
 		"doc": {
-			"presets": [ "es2015" ]
+			"presets": ["es2015", "stage-1"]
 		}
 	}
 }

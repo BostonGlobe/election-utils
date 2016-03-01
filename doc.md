@@ -41,7 +41,7 @@ Get the candidates' total vote count.
 
 **Parameters**
 
--   `candidates` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** an array of Candidates
+-   `candidates` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** an array of Candidates
 
 **Examples**
 
@@ -51,13 +51,34 @@ Candidates.getVoteCount(myCandidates) //=> 123
 
 Returns **[Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** the total vote count
 
+## makeColorMappings
+
+Map candidates to color classes.
+Useful for coloring choropleths.
+
+**Parameters**
+
+-   `$0.candidates` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** an array of Candidates
+-   `$1.party` **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** the Candidates' party
+-   `$2.mainCandidates` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** an array of main Candidates
+-   `_ref`  
+
+**Examples**
+
+```javascript
+const m = Candidates.makeColorMappings({ candidates, party, mainCandidates })
+m[0] //=> { colorClass: 'democratic-0', candidateID: '123' }
+```
+
+Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** an array of objects containing `colorClass` and `candidateID`
+
 ## sort
 
 Sort candidates by vote count and ballot order, in that order.
 
 **Parameters**
 
--   `candidates` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** an array of Candidates
+-   `candidates` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** an array of Candidates
 
 **Examples**
 
