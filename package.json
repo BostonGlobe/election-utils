@@ -10,8 +10,8 @@
     "build:es6": "rollup -c        -i src/index.js -o build/index.es6.js",
     "build": "npm run clean && npm run build:cjs && npm run build:es6",
     "prepublish": "BABEL_ENV=rollup npm run build && npm run test",
-    "test": "node test/**/*.js | faucet",
-    "test:watch": "tape-watch test/**/*.js -p faucet",
+    "test": "node test/index.js | faucet",
+    "test:watch": "tape-watch test/index.js -p faucet",
     "doc": "BABEL_ENV=doc babel src -d .tmp && documentation build .tmp/**/*.js -o doc.md -f md",
     "doc:html": "BABEL_ENV=doc babel src -d .tmp && documentation build .tmp/**/*.js -o doc.html -f html"
   },

@@ -1,5 +1,5 @@
 const test = require('tape');
-const standardize = require('./../../build/index').standardize;
+const standardize = require('./../build/index.js').standardize;
 
 test('expandState', (assert) => {
 	assert.equal(standardize.expandState('iA'), 'Iowa');
