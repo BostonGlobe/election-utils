@@ -10,7 +10,7 @@ const primaries2016Candidates = [
 		"last": "bush",
 		"first": "jeb",
 		"party": "republican",
-		"suspendedDate": "2016-02-19"
+		"suspendedDate": "2016-02-20"
 	},
 	{ 
 		"last": "carson",
