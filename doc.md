@@ -1,30 +1,3 @@
-# Candidate
-
-Various Candidate helper functions.
-
-**Examples**
-
-```javascript
-import { Candidate } from 'election-utils'
-```
-
-## isWinner
-
-Determine if this candidate is the winner.
-Will respect `winnerOverride` if present.
-
-**Parameters**
-
--   `candidate` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** the candidate
-
-**Examples**
-
-```javascript
-Candidate.isWinner(winningCandidate) //=> true
-```
-
-Returns **[Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** whether candidate is winner
-
 # Candidates
 
 Various Candidates helper functions.
@@ -34,6 +7,29 @@ Various Candidates helper functions.
 ```javascript
 import { Candidates } from 'election-utils'
 ```
+
+## addIsMainAndRunning
+
+Marge `candidates` and `lookupCandidates` by adding
+`isMainAndRunning` to each candidate.
+
+**Parameters**
+
+-   `$0.candidates` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** an array of Candidates
+-   `$1.lookupCandidates` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** an array of lookup candidates
+-   `_ref`  
+
+**Examples**
+
+```javascript
+import { Candidates, primaries2016Candidates } from 'election-utils'
+Candidates.addIsMainAndRunning({
+  candidates,
+  lookupCandidates: primaries2016Candidates
+})[0] //=> { isMainAndRunning: true, ... }
+```
+
+Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** a new array of items augmented with `isMainAndRunning`
 
 ## getVoteCount
 
@@ -61,7 +57,7 @@ Useful for coloring choropleths.
 -   `$0.candidates` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** an array of Candidates
 -   `$1.party` **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** the Candidates' party
 -   `$2.mainCandidates` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** an array of main Candidates
--   `_ref`  
+-   `_ref2`  
 
 **Examples**
 
@@ -87,6 +83,33 @@ Candidates.sort(myCandidates) //=> mySortedCandidates
 ```
 
 Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** a new array of Candidates, sorted. Does not mutate original array.
+
+# Candidate
+
+Various Candidate helper functions.
+
+**Examples**
+
+```javascript
+import { Candidate } from 'election-utils'
+```
+
+## isWinner
+
+Determine if this candidate is the winner.
+Will respect `winnerOverride` if present.
+
+**Parameters**
+
+-   `candidate` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** the candidate
+
+**Examples**
+
+```javascript
+Candidate.isWinner(winningCandidate) //=> true
+```
+
+Returns **[Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** whether candidate is winner
 
 # standardize
 
@@ -196,7 +219,7 @@ Useful for displaying `last updated`.
 
 ```javascript
 import { formatTimestamp } from 'election-utils'
-formatTimestamp(results) //=> 'Mar 1 2:26 PM EST'
+formatTimestamp(results) //=> 'Mar. 1 2:26 PM EST'
 ```
 
 Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** the formatted timestamp

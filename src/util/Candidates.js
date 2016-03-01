@@ -1,5 +1,5 @@
 import orderBy from 'lodash.orderby';
-import compareStringsIgnoreCase from './compareStringsIgnoreCase.js'
+import compare from './compareStringsIgnoreCase.js'
 import standardize from './standardize.js'
 
 /**
@@ -18,28 +18,27 @@ const Candidates = {
 	 * @param {Array} $1.lookupCandidates an array of lookup candidates
 	 * @returns {Array} a new array of items augmented with `isMainAndRunning`
 	 * @example
+	 * import { Candidates, primaries2016Candidates } from 'election-utils'
+	 * Candidates.addIsMainAndRunning({
+	 *   candidates,
+	 *   lookupCandidates: primaries2016Candidates
+	 * })[0] //=> { isMainAndRunning: true, ... }
 	 */
-	addIsMainAndRunning: ({ candidates, lookupCandidates }) => {
+	addIsMainAndRunning: ({ candidates, lookupCandidates }) =>
 
-		return candidates.map(candidate => {
+		candidates.map(c => {
 
 			// try to find this candidate in lookupCandidates
 			const mainCandidate = lookupCandidates.find(l =>
 
 				// if this candidate has a first name, find its lookup counterpart
-				(!candidate.first ||
-					compareStringsIgnoreCase(l.first,
-						candidate.first)) &&
+				(!c.first || compare(l.first, c.first)) &&
 
 				// if this candidate has a last name, find its lookup counterpart
-				(!candidate.last ||
-					compareStringsIgnoreCase(l.last,
-						candidate.last)) &&
+				(!c.last || compare(l.last, c.last)) &&
 
 				// if this candidate has a party, find its lookup counterpart
-				(!candidate.party ||
-					compareStringsIgnoreCase(l.party,
-						standardize.expandParty(candidate.party)))
+				(!c.party || compare(l.party, standardize.expandParty(c.party)))
 
 			)
 
@@ -47,13 +46,11 @@ const Candidates = {
 				!mainCandidate.suspendedDate
 
 			return {
-				...candidate,
+				...c,
 				isMainAndRunning
 			}
 
-		})
-
-	},
+		}),
 
 	/**
 	 * Map candidates to color classes.
