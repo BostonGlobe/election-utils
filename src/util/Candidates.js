@@ -1,4 +1,6 @@
 import orderBy from 'lodash.orderby';
+import compareStringsIgnoreCase from './compareStringsIgnoreCase.js'
+import standardize from './standardize.js'
 
 /**
  * Various Candidates helper functions.
@@ -7,6 +9,51 @@ import orderBy from 'lodash.orderby';
  * import { Candidates } from 'election-utils'
  */
 const Candidates = {
+
+	/**
+	 * Marge `candidates` and `lookupCandidates` by adding
+	 * `isMainAndRunning` to each candidate.
+	 *
+	 * @param {Array} $0.candidates an array of Candidates
+	 * @param {Array} $1.lookupCandidates an array of lookup candidates
+	 * @returns {Array} a new array of items augmented with `isMainAndRunning`
+	 * @example
+	 */
+	addIsMainAndRunning: ({ candidates, lookupCandidates }) => {
+
+		return candidates.map(candidate => {
+
+			// try to find this candidate in lookupCandidates
+			const mainCandidate = lookupCandidates.find(l =>
+
+				// if this candidate has a first name, find its lookup counterpart
+				(!candidate.first ||
+					compareStringsIgnoreCase(l.first,
+						candidate.first)) &&
+
+				// if this candidate has a last name, find its lookup counterpart
+				(!candidate.last ||
+					compareStringsIgnoreCase(l.last,
+						candidate.last)) &&
+
+				// if this candidate has a party, find its lookup counterpart
+				(!candidate.party ||
+					compareStringsIgnoreCase(l.party,
+						standardize.expandParty(candidate.party)))
+
+			)
+
+			const isMainAndRunning = !!mainCandidate &&
+				!mainCandidate.suspendedDate
+
+			return {
+				...candidate,
+				isMainAndRunning
+			}
+
+		})
+
+	},
 
 	/**
 	 * Map candidates to color classes.

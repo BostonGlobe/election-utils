@@ -13,50 +13,6 @@
                 {
                     "candidates": [
                         {
-                            "ballotOrder": 12,
-                            "candidateID": "33355",
-                            "first": "Jeb",
-                            "last": "Bush",
-                            "party": "GOP",
-                            "polID": "1239",
-                            "polNum": "27518",
-                            "voteCount": 0,
-                            "winnerOverride": "N"
-                        },
-                        {
-                            "ballotOrder": 5,
-                            "candidateID": "33358",
-                            "first": "Ben",
-                            "last": "Carson",
-                            "party": "GOP",
-                            "polID": "64509",
-                            "polNum": "27519",
-                            "voteCount": 0,
-                            "winnerOverride": "Y"
-                        },
-                        {
-                            "ballotOrder": 3,
-                            "candidateID": "33357",
-                            "first": "Ted",
-                            "last": "Cruz",
-                            "party": "GOP",
-                            "polID": "61815",
-                            "polNum": "27521",
-                            "voteCount": 0,
-                            "winnerOverride": "N"
-                        },
-                        {
-                            "ballotOrder": 13,
-                            "candidateID": "33366",
-                            "first": "John",
-                            "last": "Kasich",
-                            "party": "GOP",
-                            "polID": "36679",
-                            "polNum": "27528",
-                            "voteCount": 0,
-                            "winnerOverride": "N"
-                        },
-                        {
                             "ballotOrder": 11,
                             "candidateID": "33350",
                             "first": "Marco",
@@ -64,61 +20,6 @@
                             "party": "GOP",
                             "polID": "53044",
                             "polNum": "27532",
-                            "voteCount": 0,
-                            "winnerOverride": "N"
-                        },
-                        {
-                            "ballotOrder": 2,
-                            "candidateID": "33360",
-                            "first": "Donald",
-                            "last": "Trump",
-                            "party": "GOP",
-                            "polID": "8639",
-                            "polNum": "27533",
-                            "voteCount": 0,
-                            "winnerOverride": "N"
-                        },
-                        {
-                            "abbrv": "NoPrfrnc",
-                            "ballotOrder": 14,
-                            "candidateID": "33367",
-                            "last": "No Preference",
-                            "party": "GOP",
-                            "polID": "100005",
-                            "polNum": "27008",
-                            "voteCount": 0,
-                            "winnerOverride": "N"
-                        },
-                        {
-                            "ballotOrder": 10,
-                            "candidateID": "33359",
-                            "first": "Chris",
-                            "last": "Christie",
-                            "party": "GOP",
-                            "polID": "60051",
-                            "polNum": "27520",
-                            "voteCount": 0,
-                            "winnerOverride": "N"
-                        },
-                        {
-                            "ballotOrder": 8,
-                            "candidateID": "33353",
-                            "first": "Carly",
-                            "last": "Fiorina",
-                            "party": "GOP",
-                            "polID": "60339",
-                            "polNum": "27523",
-                            "voteCount": 0,
-                            "winnerOverride": "N"
-                        },
-                        {
-                            "ballotOrder": 1,
-                            "candidateID": "33361",
-                            "first": "Jim",
-                            "last": "Gilmore",
-                            "party": "GOP",
-                            "polID": "45650",
-                            "polNum": "27524",
                             "voteCount": 0,
                             "winnerOverride": "N"
                         },
@@ -134,6 +35,39 @@
                             "winnerOverride": "N"
                         },
                         {
+                            "ballotOrder": 8,
+                            "candidateID": "33353",
+                            "first": "Carly",
+                            "last": "Fiorina",
+                            "party": "GOP",
+                            "polID": "60339",
+                            "polNum": "27523",
+                            "voteCount": 0,
+                            "winnerOverride": "N"
+                        },
+                        {
+                            "ballotOrder": 9,
+                            "candidateID": "33354",
+                            "first": "Rick",
+                            "last": "Santorum",
+                            "party": "GOP",
+                            "polID": "1752",
+                            "polNum": "27004",
+                            "voteCount": 0,
+                            "winnerOverride": "N"
+                        },
+                        {
+                            "ballotOrder": 12,
+                            "candidateID": "33355",
+                            "first": "Jeb",
+                            "last": "Bush",
+                            "party": "GOP",
+                            "polID": "1239",
+                            "polNum": "27518",
+                            "voteCount": 0,
+                            "winnerOverride": "N"
+                        },
+                        {
                             "ballotOrder": 4,
                             "candidateID": "33356",
                             "first": "George",
@@ -141,6 +75,61 @@
                             "party": "GOP",
                             "polID": "1502",
                             "polNum": "27529",
+                            "voteCount": 0,
+                            "winnerOverride": "N"
+                        },
+                        {
+                            "ballotOrder": 3,
+                            "candidateID": "33357",
+                            "first": "Ted",
+                            "last": "Cruz",
+                            "party": "GOP",
+                            "polID": "61815",
+                            "polNum": "27521",
+                            "voteCount": 0,
+                            "winnerOverride": "N"
+                        },
+                        {
+                            "ballotOrder": 5,
+                            "candidateID": "33358",
+                            "first": "Ben",
+                            "last": "Carson",
+                            "party": "GOP",
+                            "polID": "64509",
+                            "polNum": "27519",
+                            "voteCount": 0,
+                            "winnerOverride": "N"
+                        },
+                        {
+                            "ballotOrder": 10,
+                            "candidateID": "33359",
+                            "first": "Chris",
+                            "last": "Christie",
+                            "party": "GOP",
+                            "polID": "60051",
+                            "polNum": "27520",
+                            "voteCount": 0,
+                            "winnerOverride": "N"
+                        },
+                        {
+                            "ballotOrder": 2,
+                            "candidateID": "33360",
+                            "first": "Donald",
+                            "last": "Trump",
+                            "party": "GOP",
+                            "polID": "8639",
+                            "polNum": "27533",
+                            "voteCount": 0,
+                            "winnerOverride": "N"
+                        },
+                        {
+                            "ballotOrder": 1,
+                            "candidateID": "33361",
+                            "first": "Jim",
+                            "last": "Gilmore",
+                            "party": "GOP",
+                            "polID": "45650",
+                            "polNum": "27524",
                             "voteCount": 0,
                             "winnerOverride": "N"
                         },
@@ -156,18 +145,29 @@
                             "winnerOverride": "N"
                         },
                         {
-                            "ballotOrder": 9,
-                            "candidateID": "33354",
-                            "first": "Rick",
-                            "last": "Santorum",
+                            "ballotOrder": 13,
+                            "candidateID": "33366",
+                            "first": "John",
+                            "last": "Kasich",
                             "party": "GOP",
-                            "polID": "1752",
-                            "polNum": "27004",
+                            "polID": "36679",
+                            "polNum": "27528",
+                            "voteCount": 0,
+                            "winnerOverride": "N"
+                        },
+                        {
+                            "abbrv": "NoPrfrnc",
+                            "ballotOrder": 14,
+                            "candidateID": "33367",
+                            "last": "No Preference",
+                            "party": "GOP",
+                            "polID": "100005",
+                            "polNum": "27008",
                             "voteCount": 0,
                             "winnerOverride": "N"
                         }
                     ],
-                    "lastUpdated": "2016-02-29T21:46:17Z",
+                    "lastUpdated": "2016-03-01T20:09:57Z",
                     "level": "state",
                     "precinctsReporting": 0,
                     "precinctsReportingPct": "0.00",
@@ -177,7 +177,7 @@
                     "statePostal": "MA"
                 }
             ],
-            "test": true
+            "test": false
         },
         {
             "countyNumber": "1",
@@ -198,6 +198,17 @@
                             "party": "Dem",
                             "polID": "1746",
                             "polNum": "27515",
+                            "voteCount": 0,
+                            "winnerOverride": "N"
+                        },
+                        {
+                            "ballotOrder": 2,
+                            "candidateID": "33346",
+                            "first": "Martin",
+                            "last": "O'Malley",
+                            "party": "Dem",
+                            "polID": "22603",
+                            "polNum": "27150",
                             "voteCount": 0,
                             "winnerOverride": "N"
                         },
@@ -234,20 +245,9 @@
                             "polNum": "27535",
                             "voteCount": 0,
                             "winnerOverride": "N"
-                        },
-                        {
-                            "ballotOrder": 2,
-                            "candidateID": "33346",
-                            "first": "Martin",
-                            "last": "O'Malley",
-                            "party": "Dem",
-                            "polID": "22603",
-                            "polNum": "27150",
-                            "voteCount": 0,
-                            "winnerOverride": "N"
                         }
                     ],
-                    "lastUpdated": "2016-02-29T21:46:25Z",
+                    "lastUpdated": "2016-03-01T20:09:59Z",
                     "level": "state",
                     "precinctsReporting": 0,
                     "precinctsReportingPct": "0.00",
@@ -257,8 +257,8 @@
                     "statePostal": "MA"
                 }
             ],
-            "test": true
+            "test": false
         }
     ],
-    "timestamp": "2016-03-01T19:27:08Z"
+    "timestamp": "2016-03-01T20:46:02Z"
 }
