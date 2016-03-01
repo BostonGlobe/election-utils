@@ -1,2 +1,2 @@
 require('./standardize.js')
-require('./createLastUpdated.js')
+require('./formatTimestamp.js')

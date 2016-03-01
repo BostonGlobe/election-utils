@@ -18,6 +18,7 @@
   "author": "Gabriel Florit",
   "license": "MIT",
   "dependencies": {
+    "dateformat": "^1.0.12",
     "lodash.orderby": "^4.0.2",
     "united-states": "^2.0.0"
   },
@@ -30,6 +31,7 @@
     "babel-preset-stage-1": "^6.5.0",
     "documentation": "^4.0.0-beta",
     "faucet": "0.0.1",
+    "lodash": "^4.5.1",
     "rimraf": "^2.5.0",
     "rollup": "^0.24.0",
     "rollup-plugin-babel": "^2.3.8",
