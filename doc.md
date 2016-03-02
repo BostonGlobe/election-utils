@@ -219,7 +219,7 @@ Useful for displaying `last updated`.
 
 ```javascript
 import { formatTimestamp } from 'election-utils'
-formatTimestamp(results) //=> 'Mar. 1 2:26 PM EST'
+formatTimestamp(results) //=> 'Mar. 1, 2:26 PM EST'
 ```
 
 Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** the formatted timestamp
