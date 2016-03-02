@@ -29,7 +29,7 @@ const Candidates = {
 		candidates.map(c => {
 
 			// try to find this candidate in lookupCandidates
-			const mainCandidate = lookupCandidates.find(l =>
+			const mainCandidate = lookupCandidates.filter(l =>
 
 				// if this candidate has a first name, find its lookup counterpart
 				(!c.first || compare(l.first, c.first)) &&
@@ -40,7 +40,7 @@ const Candidates = {
 				// if this candidate has a party, find its lookup counterpart
 				(!c.party || compare(l.party, standardize.expandParty(c.party)))
 
-			)
+			)[0]
 
 			const isMainAndRunning = !!mainCandidate &&
 				!mainCandidate.suspendedDate
