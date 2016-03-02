@@ -14,7 +14,9 @@ export default function formatTimestamp({ timestamp }) {
 
 	const date = new Date(timestamp)
 
-	const dateString = dateFormat(date, 'mmm. d h:MM TT Z')
+	const day = dateFormat(date, 'mmm. d')
+	const time = dateFormat(date, 'h:MM TT Z')
 
-	return dateString
+	return [day, time].join('&nbsp;&nbsp;')
+
 }
