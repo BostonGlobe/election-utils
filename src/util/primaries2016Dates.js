@@ -274,13 +274,6 @@ const primaries2016Dates = [
 		"resultsNote": false
 	},
 	{
-		"stateAbbr": "PR",
-		"party": "Republican",
-		"date": "2016-03-06",
-		"raceType": "Primary",
-		"resultsNote": false
-	},
-	{
 		"stateAbbr": "HI",
 		"party": "Republican",
 		"date": "2016-03-08",
@@ -614,13 +607,6 @@ const primaries2016Dates = [
 		"party": "Republican",
 		"date": "2016-05-24",
 		"raceType": "Primary",
-		"resultsNote": false
-	},
-	{
-		"stateAbbr": "PR",
-		"party": "Democratic",
-		"date": "2016-06-05",
-		"raceType": "Caucuses",
 		"resultsNote": false
 	},
 	{
