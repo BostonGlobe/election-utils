@@ -93,7 +93,7 @@
         "polNum": "27519",
         "voteCount": 0,
         "winnerOverride": "N",
-        "isMainAndRunning": true
+        "isMainAndRunning": false
     },
     {
         "ballotOrder": 10,
