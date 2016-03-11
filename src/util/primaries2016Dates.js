@@ -316,6 +316,13 @@ const primaries2016Dates = [
 		"resultsNote": false
 	},
 	{
+		"stateAbbr": "DC",
+		"party": "Republican",
+		"date": "2016-03-12",
+		"raceType": "Caucuses",
+		"resultsNote": false
+	},
+	{
 		"stateAbbr": "FL",
 		"party": "Democratic",
 		"date": "2016-03-15",
