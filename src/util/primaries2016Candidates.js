@@ -76,7 +76,7 @@ const primaries2016Candidates = [
 		"last": "rubio",
 		"first": "marco",
 		"party": "republican",
-		"suspendedDate": false
+		"suspendedDate": "2016-03-15"
 	},
 	{ 
 		"last": "sanders",
