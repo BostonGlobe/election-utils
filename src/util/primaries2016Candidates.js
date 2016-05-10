@@ -34,7 +34,7 @@ const primaries2016Candidates = [
 		"last": "cruz",
 		"first": "ted",
 		"party": "republican",
-		"suspendedDate": false
+		"suspendedDate": "2016-05-03"
 	},
 	{ 
 		"last": "fiorina",
@@ -58,7 +58,7 @@ const primaries2016Candidates = [
 		"last": "kasich",
 		"first": "john",
 		"party": "republican",
-		"suspendedDate": false
+		"suspendedDate": "2016-05-04"
 	},
 	{ 
 		"last": "o'malley",
