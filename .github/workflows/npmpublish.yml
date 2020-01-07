@@ -1,0 +1,44 @@
+name: Node.js Package
+
+on:
+  push:
+    tags:
+      - v*
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 10
+      - name: Create ./.npmrc
+        run: echo "registry=https://npm.pkg.github.com/BostonGlobe" > ./.npmrc
+      - name: Create ~/.npmrc
+        run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> ~/.npmrc
+      - name: Modify package.json with namespace
+        run: sed -i '' -e 's/"election-utils"/"@bostonglobe\/election-utils"/' package.json
+      - run: npm install
+      - run: npm test
+
+  publish-gpr:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 10
+          registry-url: https://npm.pkg.github.com/
+          scope: '@BostonGlobe'
+      - name: Create ./.npmrc
+          run: echo "registry=https://npm.pkg.github.com/BostonGlobe" > ./.npmrc
+      - name: Create ~/.npmrc
+        run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> ~/.npmrc
+      - name: Modify package.json with namespace
+        run: sed -i '' -e 's/"election-utils"/"@bostonglobe\/election-utils"/' package.json
+      - run: npm install
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
